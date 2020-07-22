@@ -1,0 +1,57 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - weather_question
+  - today_quote
+  - goto_url
+  - image_question
+  - wiki_question
+  - find_question
+  - my_location
+
+
+entities:
+  - api_query
+  - image_keyword
+  - site_url
+  - weather_location
+  - user_location
+  - location
+  - longitude
+  - latitude
+slots:
+  weather_location:
+    type: text
+  api_query:
+    type: text
+    auto_fill: False
+
+  city_id:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  location_id:
+    type: unfeaturized
+  location_type:
+    type: unfeaturized
+  longitude:
+    type: unfeaturized
+  latitude:
+    type: unfeaturized
+
+responses:
+
+  utter_greet:
+    - text: Hello, I am Scarlet. Can I help you?
+
+actions:
+  - action_find
+  - action_general_search
+  - action_open_site
+  - action_image_search
+  - action_qotd
+  - action_weather_search
+  - action_greet
+  - utter_greet

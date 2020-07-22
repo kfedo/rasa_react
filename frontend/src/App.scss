@@ -1,0 +1,396 @@
+
+
+.title-desc {
+  line-height: 1.5;
+    font: menu;
+    margin-top: 15px;
+    color: #f6e270;
+    font-style: italic;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+.start-button {
+		font-size: 11pt;
+		color: #fff;
+		position: absolute;
+		top: -37.5px;
+		left: calc(50% - 37.5px);
+		width: 75px;
+		height: 75px;
+		border-radius: 37.5px;
+		border: none;
+		box-shadow: -10px -10px 15px rgba(123, 1, 188, 1) inset,
+			-1px -1px 15px rgba(0, 0, 0, 0.8);
+		background: rgb(187,133,216);
+		background: -moz-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+		background: -webkit-linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+		background: linear-gradient(151deg, rgba(187,133,216,1) 0%, rgba(123,1,188,1) 89%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr="#bb85d8",
+			endColorstr="#7b01bc",
+			GradientType=1
+		);
+	}
+
+
+/*open site*/
+.open-site-container{
+  position: relative;
+  display:flex;
+}
+
+.site-title{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  height: 70px;
+  padding: 30px;
+}
+
+/* cards carousels */
+
+.cards_more {
+    position: relative;
+    max-width: 400px;
+}
+.cards_scroller_more {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    //height: 400px;
+    width: 390px;
+    transition: width 0.5s ease;
+    margin-left: 5px;
+    /* Enable Safari touch scrolling physics which is needed for scroll snap */
+    -webkit-overflow-scrolling: touch;
+}
+
+.cards_scroller_more img {
+    border-radius: 10px;
+}
+
+//.cards_more div.note {
+//    position: absolute;
+//    /* vertically align center */
+//    top: 50%;
+//    transform: translateY(-50%);
+//    left: 0;
+//    right: 0;
+//    background: rgba(0, 0, 0, 0.6);
+//    padding: 20px;
+//    font-size: 4em;
+//    color: white;
+//}
+
+.cards_more .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.cards_more .arrow.next {
+    //display: none;
+    font-size: 2em;
+    color: #ffffff;
+    right: 1px;
+}
+
+.cards_more .arrow.prev {
+    //display: none;
+    font-size: 2em;
+    color: #ffffff;
+    left: 15px;
+}
+
+.cards_scroller_more::-webkit-scrollbar {
+    width: 0 !important
+}
+
+
+.cards_scroller_more li  {
+
+  margin-bottom: 5px;
+}
+
+.cards_scroller_more ul.carousel_cards {
+    min-width: 25%;
+    //min-height: 70%;
+    //background: #b5b5b5;
+    //border-radius: 10px;
+  list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    display: table-cell;
+}
+.cards_scroller_more li div {
+
+  //height: 25%;
+}
+.cardBackgroundImage_more {
+    //width: 150px;
+    //border-radius: 5px;
+    //height: 100%;
+    //position: absolute;
+    //object-fit: cover;
+      display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+
+
+
+
+.cards {
+    position: relative;
+    max-width: 300px;
+}
+
+.cards_scroller {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    height: 200px;
+    width: 370px;
+  margin-left:5px;
+  margin-right:5px;
+    transition: width 0.5s ease;
+    //margin-left: 5px;
+    /* Enable Safari touch scrolling physics which is needed for scroll snap */
+    -webkit-overflow-scrolling: touch;
+}
+
+.cards_scroller img {
+    border-radius: 10px;
+}
+
+
+.cards .arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.cards .arrow.next {
+    //display: none;
+    font-size: 2em;
+    color: #ffffff;
+    right: 1px;
+}
+
+.cards .arrow.prev {
+    //display: none;
+    font-size: 2em;
+    color: #ffffff;
+    left: 15px;
+}
+
+.cards_scroller::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.cards_scroller>div.carousel_cards {
+    margin: 5px;
+    scroll-snap-align: center;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.cards_scroller div.carousel_cards {
+    min-width: 30%;
+    min-height: 60%;
+    background: #b5b5b5;
+    border-radius: 10px;
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+
+.in-left {
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+
+/* css for cards within the cards carousels */
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
+.cardBackgroundImage {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.cardFooter {
+    background: rgba(56, 53, 60, 0.86);
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    word-wrap: break-word;
+    padding: 1px;
+}
+
+.cardTitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+    height: 40%;
+    display: inline-block;
+    margin-bottom: 1px;
+    font-size: 15px;
+    /* font-weight: 600; */
+    padding: 5px;
+    /* color: #2c53af; */
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cardDescription {
+    padding: 5px;
+    font-size: 13px;
+    color: white;
+    line-height: 15px;
+}
+
+// -----------end carousel message ------------
+.sidenav {
+  width: 60%;
+
+}
+.widget-left{
+  margin: 0 !important;
+}
+.iframe-content {
+  height: 625px;
+  padding:5px;
+  max-height: 625px;
+}
+.cluster-content {
+  padding: 5px 10px;
+  display: inline-block;
+  //background: #eceadb;
+  width: 100%;
+  color: black;
+  font-size: 16px;
+  max-height: 625px;
+  overflow-y: auto;
+
+}
+.cluster-content-item{
+  color: black;
+  font-size: 12px;
+  line-height:normal;
+  margin: 9px 4px;
+
+}
+.cluster-content-item div{
+  margin: 3px;
+
+}
+.strong-item{
+  font-size: 13px;
+}
+.cluster-content a{
+  padding: 2px;
+  display:block;
+  color: black;
+  border: 1px solid transparent;
+}
+
+.cluster-content a:hover, a:focus{
+    //background: white;
+    //color: #071a29;
+    border: 1px solid rgb(249, 196, 76);
+  }
+.sentence-omit{
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,12 @@
+
+.idea
+speech
+my-rasa
+node_modules
+frontend/node_modules
+frontend/.idea
+backend/node_modules
+backend/.idea
+audio
+.vscode
+certs

@@ -1,0 +1,6 @@
+
+action_endpoint:
+# url: "http://localhost:5055/webhook"
+ url: "http://scarlet_action_server:5055/webhook"
+
+

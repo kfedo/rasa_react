@@ -1,0 +1,50 @@
+version: '3'
+services:
+    scarlet_nginx:
+      container_name: "scarlet_nginx"
+      image: nginx
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf
+      ports:
+        - 80:80
+      networks:
+        # nginx must communicate on the frontend network to the outside world
+        - frontend
+        # nginx must communicate from the backend network to the other scarlet containers (but the outside cannot see them)
+        - backend
+      depends_on: 
+        - scarlet_rasa
+        - scarlet_action_server
+        - scarlet_ui
+    scarlet_rasa:
+      container_name: "scarlet_rasa"
+      build:
+        context: backend
+#      volumes:
+#        - ./backend:/app
+      networks:
+        - backend
+
+    scarlet_action_server:
+      container_name: "scarlet_action_server"
+      build:
+        context: actions
+      networks:
+        - backend
+#      volumes:
+#        - ./actions:/app/actions
+
+    scarlet_ui:
+      container_name: "scarlet_ui"
+      build:
+        context: frontend
+#      volumes:
+#        - ./frontend/build:/app/build
+      networks:
+        - backend
+networks:
+  frontend:
+    external:
+      name: ${NETWORK:-webproxy}
+  backend:
+    driver: bridge

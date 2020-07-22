@@ -1,0 +1,166 @@
+@loading-animation-duration: 1s;
+
+.bubble {
+  height: auto;
+  max-width: 70%;
+
+  @media (min-width: 576px) {
+    max-width: 55%;
+  }
+
+  @media (min-width: 992px) {
+      max-width: 45%;
+  }
+
+  width: fit-content;
+  color: #fff;
+  margin: 5px 0.25;
+  padding: 5px 10px;
+
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+
+  div {
+    word-wrap: break-word;
+  }
+
+  .loading-dot {
+    display: inline-block;
+    margin-right: 2px;
+    width: 10px;
+    height: 10px;
+    border: @brand-secondary;
+    background-color: @brand-secondary;
+    border-radius: 100%;
+    opacity: 0.5;
+  }
+  .dot-1 {
+    animation: loading-dot-1-pulsate @loading-animation-duration ease-out infinite;
+  }
+
+  .dot-2 {
+    animation: loading-dot-2-pulsate @loading-animation-duration ease-out infinite;
+  }
+
+  .dot-3 {
+    animation: loading-dot-3-pulsate @loading-animation-duration ease-out infinite;
+  }
+}
+
+.bubble:after{
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-width: 6px;
+  margin-top: 1px;
+  top: 0%;
+}
+
+.bubble-user {
+  background-color: @brand-secondary;
+}
+
+.bubble-user:after {
+  left: 100%;
+  border-left-color: @brand-secondary;
+}
+
+.bubble-bot {
+  background-color: @brand-primary;
+}
+
+.bubble-bot:after {
+  right: 100%;
+  border-right-color: @brand-primary;
+}
+
+@keyframes loading-dot-1-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@-webkit-keyframes loading-dot-1-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes loading-dot-2-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 0.25;
+    }
+    66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@-webkit-keyframes loading-dot-2-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 0.25;
+    }
+    66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes loading-dot-3-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 0.25;
+    }
+    66% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes loading-dot-2-pulsate {
+    0% {
+        opacity: 0.25;
+    }
+    33% {
+        opacity: 0.25;
+    }
+    66% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
